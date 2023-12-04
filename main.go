@@ -1,4 +1,4 @@
-package main
+package info
 
 import (
 	"bufio"
@@ -242,21 +242,21 @@ func WriteToJSONFile(filename, content string) error {
 
 func HandleSystemInfo(w http.ResponseWriter, r *http.Request) {
 	cpuFilePath := "lscpu_out.txt"
-	cpuInfo, err := readAndParseCPUInfo(cpuFilePath)
+	cpuInfo, err := ReadAndParseCPUInfo(cpuFilePath)
 	if err != nil {
 		http.Error(w, fmt.Sprintf("Error reading CPU info: %s", err), http.StatusInternalServerError)
 		return
 	}
 
 	topFilePath := "top.txt"
-	processInfoList, err := readAndParseTopOutput(topFilePath)
+	processInfoList, err := ReadAndParseTopOutput(topFilePath)
 	if err != nil {
 		http.Error(w, fmt.Sprintf("Error reading top output: %s", err), http.StatusInternalServerError)
 		return
 	}
 
 	DiskPath := "df_output.txt"
-	DiskInfoList, err := readAndParseDiskInfo(DiskPath)
+	DiskInfoList, err := ReadAndParseDiskInfo(DiskPath)
 	if err != nil {
 		http.Error(w, fmt.Sprintf("Error reading disk info: %s", err), http.StatusInternalServerError)
 		return
@@ -278,7 +278,7 @@ func HandleSystemInfo(w http.ResponseWriter, r *http.Request) {
 	w.Write(jsonData)
 }
 
-func main() {
+func Http_call() {
 	http.HandleFunc("/system-info", HandleSystemInfo)
 
 	port := 8083
