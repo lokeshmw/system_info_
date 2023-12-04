@@ -1,0 +1,14 @@
+Filesystem                                              Size  Used Avail Use% Mounted on
+devtmpfs                                                3.8G     0  3.8G   0% /dev
+tmpfs                                                   3.9G     0  3.9G   0% /dev/shm
+tmpfs                                                   3.9G  302M  3.6G   8% /run
+tmpfs                                                   3.9G     0  3.9G   0% /sys/fs/cgroup
+/dev/mapper/centos-root                                  80G   33G   48G  41% /
+/dev/sda1                                              1014M  356M  659M  36% /boot
+/dev/mapper/centos-var                                  411G  262G  150G  64% /var
+tmpfs                                                   781M     0  781M   0% /run/user/25072009
+tmpfs                                                   781M     0  781M   0% /run/user/500
+lvs-nas-02.nimblestorage.com:/exports/homelvs.01        5.0T  4.7T  370G  93% /auto/homelvs.nas01
+lvs-isnas-05.nimblestorage.com:/exports/hq-asup-san190   32T   26T  6.3T  81% /auto/hq-asup-san190
+lvs-isnas-01.nimblestorage.com:/exports/support.lnk      16T  7.5T  8.6T  47% /auto/support
+lvs-isnas-05.nimblestorage.com:/exports/hq-asup-san243   32T   27T  6.0T  82% /auto/hq-asup-san243
